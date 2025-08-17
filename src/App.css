@@ -1,0 +1,91 @@
+.page-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: row;
+  background: url("../public/ocean.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.searchbar-wrapper {
+  position: fixed;
+  top: 12.5rem; 
+  left: 3.75rem;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.searchbar-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;       
+  width: 50%;        
+  justify-content: center;
+  padding: 0;
+  margin: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.products-container > div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.products-container > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 639px) {
+  .page-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .searchbar-wrapper {
+    position: relative;  
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .products-container {
+    width: 100%;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .searchbar-wrapper {
+    position: relative; 
+    top: auto;
+    left: auto;
+    margin-bottom: 2rem;
+  }
+
+  .products-container {
+    width: 80%; 
+  }
+}
+
+
+@media (min-width: 1280px) {
+  .searchbar-wrapper {
+    position: fixed; 
+    top: 12.5rem;
+    left: 3.75rem;
+  }
+
+  .products-container {
+    width: 50%;
+  }
+}
